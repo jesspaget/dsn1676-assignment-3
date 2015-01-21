@@ -1,0 +1,105 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.asteroid {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 200px;
+    bottom: 200px;
+    animation: rotate 5s ease-in-out infinite alternate;
+}
+
+@keyframes rotate {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.stars {
+    background-image: url(../images/stars.svg);
+    width: 100%;
+    height: 100vh;
+    animation: scale 5s ease-in-out infinite alternate;
+}
+
+@keyframes scale {
+    
+    0% {
+        transform: scale(1,1);
+    }
+    
+    100% {
+        transform: scale(1.2,1.2);
+    }
+    
+}
+
+.ship {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 300px;
+    top: 200px;
+    animation: bounce 5s infinite alternate;
+}
+    
+@keyframes bounce {
+    
+    0% {
+        transform: translateY(0px);
+    }
+    
+    50% {
+        transform: translateY(200px);
+    }
+    
+    60% {
+        transform: translateY(100px);
+    }
+    
+    70% {
+        transform: translateX(200px);
+    }
+    
+    80% {
+        transform: translateX(150px);
+    }
+    
+    90% {
+        transform: translateX(200px);
+    }
+    
+    100% {
+        transform: translateY(200px);
+    }
+}
+    
+    
+    
+    
+    
+    
+    
+    
